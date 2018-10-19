@@ -27,7 +27,7 @@
       "commandName": "Production",
       "applicationUrl": "https://localhost:403;http://localhost:80",
       "environmentVariables": {
-        "ASPNETCORE_ENVIRONMENT": "Development"
+        "ASPNETCORE_ENVIRONMENT": "Production"
       }
     }
   }
