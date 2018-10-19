@@ -17,7 +17,7 @@
     },
     "Production": {
       "commandName": "Project",
-      "applicationUrl": "https://www.michaelduffey.com:403;http://www.michaelduffey.com:80",
+      "applicationUrl": "https://www.michaelduffey.com:443;http://www.michaelduffey.com:80",
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Production"
       }
