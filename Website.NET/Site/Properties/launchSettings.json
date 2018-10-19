@@ -24,7 +24,7 @@
       }
     },
     "Production": {
-      "commandName": "Production",
+      "commandName": "Project",
       "applicationUrl": "https://localhost:403;http://localhost:80",
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Production"
