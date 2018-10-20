@@ -29,24 +29,11 @@ namespace Site
             {
                 app.UseDeveloperExceptionPage();
             }
-
             app.UseMvc(routes =>
             {
                 routes.MapRoute(
                     name: "default",
                     template: "{controller=Home}/{action=Index}/{id?}");
-            });
-            app.Run(async (context) =>
-            {
-                //if (context.Request.Path == "/")
-                //{
-                //    context.Response.Headers.Add("Cache-Control", "public, max-age=600");
-                //    var file = env.WebRootFileProvider.GetFileInfo("index.html");
-                //    using (var streamReader = new StreamReader(file.CreateReadStream()))
-                //    {
-                //        await context.Response.WriteAsync(streamReader.ReadToEnd());
-                //    }
-                //}
             });
         }
     }
