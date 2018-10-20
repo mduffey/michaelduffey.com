@@ -1,0 +1,26 @@
+﻿@font-face {
+    font-family: 'Fira Code';
+    src: url('/fonts/fira/FiraCode-Regular.eot');
+    src: url('/fonts/fira/FiraCode-Regular.eot') format('embedded-opentype'), url('/fonts/fira/FiraCode-Regular.woff2') format('woff2'), url('/fonts/fira/FiraCode-Regular.woff') format('woff'), url('/fonts/fira/FiraCode-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'kgneatlyprinted';
+    src: url('/fonts/kgnp/kgneatlyprinted-webfont.woff2') format('woff2'), url('/fonts/kgnp/kgneatlyprinted-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'KGFirstTimeInForever';
+    src: url('/fonts/kgftif/KGFirstTimeInForever-webfont.woff2') format('woff2'), url('/fonts/kgftif/KGFirstTimeInForever-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'dock';
+    src: url('/fonts/dock/urwdockcond-regular-webfont.woff2') format('woff2'), url('/fonts/dock/urwdockcond-regular-webfont.woff') format('woff');
+}

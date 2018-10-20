@@ -45,4 +45,4 @@ class CommentForm extends React.Component {
     }
 }
 
-ReactDOM.render(<CommentBox />, document.getElementById('content'));
+ReactDOM.render(<CommentBox />, document.getElementById('comments'));

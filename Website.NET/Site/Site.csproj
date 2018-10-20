@@ -5,6 +5,29 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="wwwroot\fonts\fira\eot\**" />
+    <Compile Remove="wwwroot\fonts\fira\otf\**" />
+    <Compile Remove="wwwroot\fonts\fira\ttf\**" />
+    <Compile Remove="wwwroot\fonts\fira\woff2\**" />
+    <Compile Remove="wwwroot\fonts\fira\woff\**" />
+    <Content Remove="wwwroot\fonts\fira\eot\**" />
+    <Content Remove="wwwroot\fonts\fira\otf\**" />
+    <Content Remove="wwwroot\fonts\fira\ttf\**" />
+    <Content Remove="wwwroot\fonts\fira\woff2\**" />
+    <Content Remove="wwwroot\fonts\fira\woff\**" />
+    <EmbeddedResource Remove="wwwroot\fonts\fira\eot\**" />
+    <EmbeddedResource Remove="wwwroot\fonts\fira\otf\**" />
+    <EmbeddedResource Remove="wwwroot\fonts\fira\ttf\**" />
+    <EmbeddedResource Remove="wwwroot\fonts\fira\woff2\**" />
+    <EmbeddedResource Remove="wwwroot\fonts\fira\woff\**" />
+    <None Remove="wwwroot\fonts\fira\eot\**" />
+    <None Remove="wwwroot\fonts\fira\otf\**" />
+    <None Remove="wwwroot\fonts\fira\ttf\**" />
+    <None Remove="wwwroot\fonts\fira\woff2\**" />
+    <None Remove="wwwroot\fonts\fira\woff\**" />
+  </ItemGroup>
+
+  <ItemGroup>
     <None Include="wwwroot\js\site.jsx" />
   </ItemGroup>
 
