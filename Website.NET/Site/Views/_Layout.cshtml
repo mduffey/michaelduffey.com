@@ -10,21 +10,20 @@
 <body>
     <div class="container">
         <div class="row" id="header">
-            <div class="col-md-4 col-sm-6" id="menu"></div>
-            <div class="col-md-5 offset-md-3" id="title">
+            <div class="col-12 order-2 order-md-1 col-md-7" id="menu"></div>
+            <div class="col-12 order-1 order-md-2 col-md-5" id="title">
                 <h1>Michael Duffey</h1>
                 <p>Experienced Software Developer, with a focus in C# and web development</p>
+                <p>
+                    <a href="https://docs.google.com/document/d/1yRLYrY98cgNtvRqYofOHuzq4x7eyhz0dmDzcocm8KY0/edit?usp=sharing" target="_blank">Resume</a>
+                    <a href="https://www.linkedin.com/in/duffeymichael/">LinkedIn</a>
+                    <a href="https://github.com/mduffey">GitHub</a>
+                </p>
             </div>
         </div>
         <div class="row" id="main">
-            <div class="col-sm-8 col-md-10" id="content">
-                @RenderBody()
-            </div>
+            <div class="col-sm-8 col-md-10" id="content">@RenderBody()</div>
         </div>
-    </div>
-    <div id="footer">
-        <p>Welcome to .NET on Linux! This website is running on a <a href="https://www.digitalocean.com/" target="_blank">Digital Ocean</a> Ubuntu droplet.</p>
-        <p>You can find the code powering this on <a href="https://github.com/mduffey/michaelduffey.com" target="_blank">Github</a>.</p>
     </div>
     @{
         if (System.Diagnostics.Debugger.IsAttached)
@@ -40,8 +39,11 @@
     }
     <script src="@Url.Content("~/js/menubutton.jsx")"></script>
     <script src="@Url.Content("~/js/menu.jsx")"></script>
+    <script src="@Url.Content("~/js/paragraphs.jsx")"></script>
     <script src="@Url.Content("~/js/home/introduction.jsx")"></script>
     <script src="@Url.Content("~/js/portfolio/portfolio.jsx")"></script>
+    <script src="@Url.Content("~/js/tech/tech.jsx")"></script>
+    <script src="@Url.Content("~/js/tech/technology.jsx")"></script>
     <script src="@Url.Content("~/js/site.jsx")"></script>
 </body>
 </html>

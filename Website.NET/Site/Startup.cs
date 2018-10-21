@@ -19,6 +19,7 @@ namespace Site
             services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
             services.AddSingleton<ISingularContentRepository<Introduction>, IntroductionRepository>();
             services.AddSingleton<IEnumerableContentRepository<Project>, ProjectRepository>();
+            services.AddSingleton<ISingularContentRepository<Library.Models.Tech.Response>, TechRepository>();
             services.AddReact();
             services.AddMvc();
             return services.BuildServiceProvider();

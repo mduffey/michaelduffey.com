@@ -1,11 +1,11 @@
 ﻿body {
     font-family: dock;
     font-size: 22px;
-    background-color: rgb(230,230,230);
+    background-color: rgb(190, 210, 240);
 }
 
 h1, h2, h3, h4, h5 {
-    font-family: kgneatlyprinted;
+    font-family: dock;
 }
 
 h1 {
@@ -29,6 +29,14 @@ h2 {
     margin-bottom: 5px;
 }
 
+#title h1 {
+    font-family: kgneatlyprinted;
+}
+
+#title a {
+    margin-left: 10px;
+}
+
 #header {
     margin-top: 5px;
 }
@@ -47,12 +55,13 @@ h2 {
 
     #menu .btn-secondary, #menu .btn-secondary:focus {
         border: none;
+        font-size: 24px;
         background-color: transparent;
         color: rgb(80, 80, 80);
         box-shadow: none;
     }
 
-    #menu .btn-secondary:hover {
+    #menu .btn-secondary:not(.active):hover {
         cursor: pointer;
         border: none;
         color: black;
@@ -64,4 +73,5 @@ h2 {
        border: 1px 1px 0px 1px solid black;
        border-radius: 0;
        background-color: white;
+       cursor: default;
     }

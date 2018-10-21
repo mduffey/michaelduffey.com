@@ -11,8 +11,12 @@ const loadContent = (path, pushHistory = true) => {
             render(<Introduction url="/home/content" />);
             break;
         case '/portfolio':
-            render(<Portfolio url="/portfolio" />);
+            render(<Portfolio url="/portfolio/content" />);
             name = " - Portfolio";
+            break;
+        case '/tech':
+            render(<Tech url="/tech/content" />);
+            name = " - Website Tech Stack";
             break;
     }
     document.title = titleBase + name;

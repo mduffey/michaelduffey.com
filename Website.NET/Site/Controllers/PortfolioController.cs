@@ -19,6 +19,11 @@ namespace Site.Controllers
 
         public IActionResult Index()
         {
+            return View();
+        }
+
+        public IActionResult Content()
+        {
             return Json(_projectRepository.ReadAll());
         }
     }
