@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
-using System.Threading.Tasks;
+using Library.Models.Home;
+using Library.Models.Portfolio;
+using Library.Services;
+using Library.Services.Fake;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.Hosting.Internal;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.DependencyInjection;
-using Microsoft.Extensions.FileProviders;
 using React.AspNet;
 
 namespace Site
@@ -19,6 +17,8 @@ namespace Site
         public IServiceProvider ConfigureServices(IServiceCollection services)
         {
             services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
+            services.AddSingleton<ISingularContentRepository<Introduction>, IntroductionRepository>();
+            services.AddSingleton<IEnumerableContentRepository<Project>, ProjectRepository>();
             services.AddReact();
             services.AddMvc();
             return services.BuildServiceProvider();
