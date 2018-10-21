@@ -1,48 +1,26 @@
-﻿class Comment extends React.Component {
-    render() {
-        return (
-            <div className="comment">
-                <h2 className="commentAuthor">{this.props.author}</h2>
-                {this.props.children}
-            </div>
-        );
-    }
-}
+﻿const render = (content) => {
+    ReactDOM.render(content, document.getElementById('content'));
+};
 
-class CommentBox extends React.Component {
-    render() {
-        return (
-            <div className="commontBox">
-                <p>This is really weird.</p>
-                <CommentList />
-                <CommentForm />
-            </div>
-        );
-    }
-}
+const titleBase = window.name;
 
-class CommentList extends React.Component {
-    render() {
-        return (
-            <div className="commentList">
-                <Comment author="Daniel Lo Nigro">
-                    Hello ReactJS.NET World!
-                </Comment>
-                <Comment author="Pete Hunt">This is one comment</Comment>
-                <Comment author="Jordan Walke">
-                    This is another comment
-                </Comment>
-            </div>
-        );
+const loadContent = (path, pushHistory = true) => {
+    var name = "";
+    switch (path) {
+        case '/':
+            render(<Introduction url="/home/content" />);
+            break;
+        case '/portfolio':
+            render(<Portfolio url="/portfolio" />);
+            name = "- Portfolio";
+            break;
     }
-}
-
-class CommentForm extends React.Component {
-    render() {
-        return (
-            <div className="commentForm">Hello, world! I am a CommentForm.</div>
-        );
+    if (pushHistory) {
+        window.history.pushState(null, titleBase + name, path);
+    } else {
+        window.history.replaceState(null, titleBase + name, path);
     }
-}
+};
 
-ReactDOM.render(<CommentBox />, document.getElementById('comments'));
+loadContent(window.location.pathname, false);
+

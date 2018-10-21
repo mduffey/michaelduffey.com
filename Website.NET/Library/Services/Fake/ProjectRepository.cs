@@ -19,7 +19,7 @@ namespace Library.Services.Fake
 
         public List<Project> ReadAll()
         {
-            throw new NotImplementedException();
+            return new List<Project>();
         }
 
         public void Update(Project item)

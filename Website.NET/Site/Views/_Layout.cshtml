@@ -10,14 +10,7 @@
 <body>
     <div class="container">
         <div class="row" id="header">
-            <div class="col-md-4 col-sm-6" id="menu">
-                <div class="btn-group" role="group" aria-label="Basic example">
-                    <button type="button" class="btn btn-secondary active">Home</button>
-                    <button type="button" class="btn btn-secondary">Portfolio</button>
-                    <button type="button" class="btn btn-secondary">Resume And Contact Information</button>
-                    <button type="button" class="btn btn-secondary">Website Tech</button>
-                </div>
-            </div>
+            <div class="col-md-4 col-sm-6" id="menu"></div>
             <div class="col-md-5 offset-md-3" id="title">
                 <h1>Michael Duffey</h1>
                 <p>Experienced Software Developer, with a focus in C# and web development</p>
@@ -45,6 +38,10 @@
             <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.production.min.js"></script>
         }
     }
+    <script src="@Url.Content("~/js/menubutton.jsx")"></script>
+    <script src="@Url.Content("~/js/menu.jsx")"></script>
     <script src="@Url.Content("~/js/home/introduction.jsx")"></script>
+    <script src="@Url.Content("~/js/portfolio/portfolio.jsx")"></script>
+    <script src="@Url.Content("~/js/site.jsx")"></script>
 </body>
 </html>

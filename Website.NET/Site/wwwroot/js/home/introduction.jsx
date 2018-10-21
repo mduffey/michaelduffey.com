@@ -24,7 +24,7 @@
 
 class Paragraphs extends React.Component {
     render() {
-        if (this.props.data != '')
+        if (this.props.data !== '')
         {
             // The key is the index since we're splitting the paragraph up ourselves.
             let split = this.props.data.split("\n").map((i, key) => <p key={key}>{i}</p>);
@@ -33,8 +33,3 @@ class Paragraphs extends React.Component {
         return null;
     }
 }
-
-ReactDOM.render(
-    <Introduction url="/home/content" />,
-    document.getElementById('content')
-);
