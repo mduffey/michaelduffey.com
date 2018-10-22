@@ -1,6 +1,9 @@
 ﻿using System;
 using JavaScriptEngineSwitcher.ChakraCore;
+using JavaScriptEngineSwitcher.Core;
 using JavaScriptEngineSwitcher.Extensions.MsDependencyInjection;
+using JavaScriptEngineSwitcher.Jint;
+using JavaScriptEngineSwitcher.Vroom;
 using Library.Models.Home;
 using Library.Models.Portfolio;
 using Library.Services;
@@ -18,8 +21,6 @@ namespace Site
         // Updated per https://github.com/reactjs/React.NET/issues/433#issuecomment-325188857
         public IServiceProvider ConfigureServices(IServiceCollection services)
         {
-            services.AddJsEngineSwitcher(options => options.DefaultEngineName = ChakraCoreJsEngine.EngineName)
-                .AddChakraCore();
             services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
             services.AddSingleton<ISingularContentRepository<Introduction>, IntroductionRepository>();
             services.AddSingleton<IEnumerableContentRepository<Project>, ProjectRepository>();
@@ -31,6 +32,12 @@ namespace Site
         
         public void Configure(IApplicationBuilder app, IHostingEnvironment env)
         {
+            var switcher = JsEngineSwitcher.Instance;
+            switcher.DefaultEngineName = "Jint";
+            switcher.EngineFactories
+                .AddJint()
+                .AddChakraCore()
+                .AddVroom();
             // Initialise ReactJS.NET. Must be before static files.
             app.UseReact(config =>
             {
