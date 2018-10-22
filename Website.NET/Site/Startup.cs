@@ -1,4 +1,6 @@
 ﻿using System;
+using JavaScriptEngineSwitcher.ChakraCore;
+using JavaScriptEngineSwitcher.Extensions.MsDependencyInjection;
 using Library.Models.Home;
 using Library.Models.Portfolio;
 using Library.Services;
@@ -16,6 +18,8 @@ namespace Site
         // Updated per https://github.com/reactjs/React.NET/issues/433#issuecomment-325188857
         public IServiceProvider ConfigureServices(IServiceCollection services)
         {
+            services.AddJsEngineSwitcher(options => options.DefaultEngineName = ChakraCoreJsEngine.EngineName)
+                .AddChakraCore();
             services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
             services.AddSingleton<ISingularContentRepository<Introduction>, IntroductionRepository>();
             services.AddSingleton<IEnumerableContentRepository<Project>, ProjectRepository>();
