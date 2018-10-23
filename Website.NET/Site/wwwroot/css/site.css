@@ -75,3 +75,14 @@ h2 {
        background-color: white;
        cursor: default;
     }
+
+    pre {
+        margin-top: 10px;
+        font-size: 16px;
+        font-family: 'Fira Code';
+    }
+
+    pre > span.classStyle {
+        font-weight: bold;
+        color: blue;
+    }
